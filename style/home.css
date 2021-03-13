@@ -3,21 +3,37 @@
     padding: 0px;
 }
 
+.screen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.container{
+    border: 8px solid black;
+    position: absolute;
+    height: 428px;
+    width: 750px;
+}
+
 .line{
     -webkit-transform: rotateX(-5deg) rotateY(10deg);
     transform: rotateX(17deg) rotateY(40deg);
     border-bottom: 8px solid black;
     position: relative;
-    top: 238px;
-    left: 115px;
+    top: 185px;
+    left: -125px;
     z-index: -2;
     width: 1000px;
 }
 
 .instrument{
     position: absolute;
-    top: 69px;
-    left: 88px;
+    top: 23px;
+    left: -129px;
     z-index: -1;
 }
 
@@ -26,14 +42,12 @@
     height: 199px;
     background: url(../images/cat.png);
     position: absolute;
-    top: 82px;
-    left: 533px;
+    top: 34px;
+    left: 313px;
 }
 
 .mouth{
     background-image: url(../images/mouth.png);
-    width:1000px;
-    height: 1000px;
 }
 
 #whiteCat{
@@ -55,8 +69,8 @@
     width: 96px;
     height: 84px;
     position: absolute;
-    top: 118px;
-    left: 439px;
+    top: 70px;
+    left: 219px;
 }
 
 #rightDown{
@@ -64,8 +78,8 @@
     width: 121px;
     height: 137px;
     position: absolute;
-    top: 118px;
-    left: 413px;
+    top: 70px;
+    left: 193px;
 }
 
 #leftUp{
@@ -73,8 +87,8 @@
     width: 56px;
     height: 62px;
     position: absolute;
-    top: 188px;
-    left: 653px;
+    top: 144px;
+    left: 437px;
 }
 
 #leftDown{
@@ -82,8 +96,8 @@
     width: 131px;
     height: 83px;
     position: absolute;
-    top: 229px;
-    left: 600px;
+    top: 185px;
+    left: 388px;
 }
 
 
@@ -92,8 +106,8 @@
     width: 13px;
     height: 13px;
     position: absolute;
-    top: 195px;
-    left: 576px;
+    top: 144px;
+    left: 350px;
 }
 
 #closed{
@@ -101,6 +115,6 @@
     width: 42px;
     height: 20px;
     position: absolute;
-    top: 191px;
-    left: 565px;
+    top: 142px;
+    left: 340px;
 }
