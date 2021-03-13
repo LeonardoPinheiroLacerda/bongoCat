@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.line{
+    -webkit-transform: rotateX(-5deg) rotateY(10deg);
+    transform: rotateX(17deg) rotateY(40deg);
+    border-bottom: 8px solid black;
+    position: relative;
+    top: 238px;
+    left: 115px;
+    z-index: -2;
+    width: 1000px;
+}
+
+.instrument{
+    position: absolute;
+    top: 69px;
+    left: 88px;
+    z-index: -1;
+}
+
+.cat{
+    width: 242px;
+    height: 199px;
+    background: url(../images/cat.png);
+    position: absolute;
+    top: 82px;
+    left: 533px;
+}
+
+.mouth{
+    background-image: url(../images/mouth.png);
+    width:1000px;
+    height: 1000px;
+}
+
+#whiteCat{
+    background-position: -439px -12px;
+    background-repeat: no-repeat;
+}
+
+.rightPaw{
+    background: url(../images/paw-right.png);
+}
+
+.leftPaw{
+    background: url(../images/paw-left.png);
+}
+
+
+#rightUp{
+    background-position: -345px -48px;
+    width: 96px;
+    height: 84px;
+    position: absolute;
+    top: 118px;
+    left: 439px;
+}
+
+#rightDown{
+    background-position: -1119px -48px;
+    width: 121px;
+    height: 137px;
+    position: absolute;
+    top: 118px;
+    left: 413px;
+}
+
+#leftUp{
+    background-position: -562px -120px;
+    width: 56px;
+    height: 62px;
+    position: absolute;
+    top: 188px;
+    left: 653px;
+}
+
+#leftDown{
+    background-position: -1307px -160px;
+    width: 131px;
+    height: 83px;
+    position: absolute;
+    top: 229px;
+    left: 600px;
+}
+
+
+#openned{
+    background-position: -1282px -120px;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 195px;
+    left: 576px;
+}
+
+#closed{
+    background-position: -468px -115px;
+    width: 42px;
+    height: 20px;
+    position: absolute;
+    top: 191px;
+    left: 565px;
+}
