@@ -15,9 +15,9 @@ Sound.prototype.flush = function(){
 }
 
 var soundPaths = {
-    bongo0 : 'sounds/bongo0.wav',
-    bongo1 : 'sounds/bongo1.wav',
-    meow : 'sounds/meow.wav'
+    bongo0 : 'sounds/bongo0.mp3',
+    bongo1 : 'sounds/bongo1.mp3',
+    meow : 'sounds/meow.mp3'
 }
 
 var bongo0 = new Sound(soundPaths.bongo0);
