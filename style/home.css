@@ -3,13 +3,22 @@
     padding: 0px;
 }
 
+.info{
+    position: absolute;
+    top: 10px;
+    left: 691px;
+    display: flex;
+    width: 45px;
+    cursor: pointer;
+}
+
 .screen{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .container{
@@ -17,6 +26,27 @@
     position: absolute;
     height: 428px;
     width: 750px;
+}
+
+#invisible{
+    opacity: 0;
+    z-index: -3;
+}
+
+#visible{
+    opacity: 1;
+    z-index: 2;
+}
+
+.infoAlert{
+    border: 1px solid black;
+    position: relative;
+    top: 3px;
+    left: 9px;
+    width: 730px;
+    height: 406px;
+    background: white;
+    font-family: cursive;
 }
 
 .line{
@@ -117,4 +147,9 @@
     position: absolute;
     top: 142px;
     left: 340px;
+}
+
+#exitText{
+    text-align: right;
+    width: 725px;
 }

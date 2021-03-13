@@ -37,6 +37,12 @@ document.onkeypress = function(e){
             }
             break;
 
+        case 'x':
+        case 'X':
+            document.getElementsByClassName('infoAlert')[0].id = "invisible";
+            break;
+
+
     }
 }
 
