@@ -1,54 +1,77 @@
 @keyframes bigButtonClick {
-
     from{
         position: relative;
         top: 0px;
         left: 0px;
-
         width: 771px;
         height: 85px;
-
         background: white;
     }
-
     to{
         position: relative;
         top: 5px;
         left: 5px;
-
         width: 766px;
         height: 80px;
-
         background: rgb(237, 237, 237);
-
     }
 }
 
 @keyframes bigButtonRelease {
-
     from{
-
         position: relative;
         top: 5px;
         left: 5px;
-
         width: 766px;
         height: 80px;
-
         background: rgb(237, 237, 237);
-
     }
 
     to{
-
         position: relative;
         top: 0px;
         left: 0px;
-
         width: 771px;
         height: 85px;
-
         background: white;
+    }
+}
 
+@keyframes mediumButtonClick {
+    from{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 365px;
+        height: 85px;
+        background: white;
+    }
+    to{
+        position: relative;
+        top: 5px;
+        left: 5px;
+        width: 360px;
+        height: 80px;
+        background: rgb(237, 237, 237);
+    }
+}
+
+@keyframes mediumButtonRelease {
+    from{
+        position: relative;
+        top: 5px;
+        left: 5px;
+        width: 360px;
+        height: 80px;
+        background: rgb(237, 237, 237);
+    }
+
+    to{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 365px;
+        height: 85px;
+        background: white;
     }
 }
