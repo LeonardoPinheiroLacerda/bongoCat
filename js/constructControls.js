@@ -111,14 +111,40 @@ function constructButton(typeButton, action, text){
 }
 
 function meowButton(){
-    constructButton(typeButtons.big, mouthAction, "Meow");    
+    constructButton(typeButtons.big, mouthAction, "Meow");
+    //controls.appendChild(document.createElement('br'));    
 }
 
 function bongoButtons(){
+
+    document.getElementsByClassName('instrument')[0].src = "images/bongo.png"
+
     constructButton(typeButtons.medium, bongo0Action, "Left");    
     constructButton(typeButtons.medium, bongo1Action, "Right");
+
+}
+
+function keyboardButtons(){
+
+    document.getElementsByClassName('instrument')[0].src = "images/keyboard.png"
+
+    constructButton(typeButtons.small, keyboard1Action, "1");
+    constructButton(typeButtons.small, keyboard2Action, "2");
+    constructButton(typeButtons.small, keyboard3Action, "3");
+    constructButton(typeButtons.small, keyboard4Action, "4");
+    constructButton(typeButtons.small, keyboard5Action, "5");
+
+    controls.appendChild(document.createElement('br'));
+
+    constructButton(typeButtons.small, keyboard6Action, "6");
+    constructButton(typeButtons.small, keyboard7Action, "7");
+    constructButton(typeButtons.small, keyboard8Action, "8");
+    constructButton(typeButtons.small, keyboard9Action, "9");
+    constructButton(typeButtons.small, keyboard0Action, "0");
+
 }
 
 
 meowButton();
-bongoButtons();
+//bongoButtons();
+keyboardButtons();
