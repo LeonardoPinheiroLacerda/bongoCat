@@ -5,19 +5,27 @@ function bongoBottons(){
 }
 
 function meowButton(){
-    var button = document.createElement('button');
-    button.innerHTML = "Meow";
-    button.classList.add("meow");
+    var div = document.createElement('div');
+    div.innerHTML = "Meow";
+    div.classList.add("meow");
 
-    button.onmousedown = function(){
+    div.style.backgroundColor = 'gray';
+    div.style.textAlign = 'center';
+    div.style.touchAction = "manipulation";
+
+    div.onpointerdown = function(){
         mouthAction.do();
     }
 
-    button.onmouseup = function(){
+    div.onpointerup = function(){
         mouthAction.undo();
     }
 
-    controls.appendChild(button);
+    div.onselectstart = function(){return false}
+    div.oncontextmenu = function(){return false}
+    
+
+    controls.appendChild(div);
 }
 
 meowButton();

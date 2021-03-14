@@ -1,3 +1,7 @@
+.disable-dbl-tap-zoom {
+    touch-action: manipulation;
+  }
+
 .container{
     border: 8px solid black;
     position: absolute;
