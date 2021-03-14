@@ -1,0 +1,19 @@
+.container{
+    border: 8px solid black;
+    position: absolute;
+    height: 428px;
+    width: 750px;
+
+    top:118px;
+}
+
+.info{
+    display: none;
+}
+
+.meow{
+    width: 771px;
+    height: 85px;
+    font-family: cursive;
+    font-size: 41px;
+}
