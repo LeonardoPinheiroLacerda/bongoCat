@@ -1,11 +1,13 @@
 function Sound(path){
     this.path = path;
     this.flag = false;
+    
 }
 
 Sound.prototype.play = function(){
     if(this.flag === false){
-        new Audio(this.path).play();
+        var audio = new Audio(this.path);
+        audio.play();
         this.flag = true;
     }
 }

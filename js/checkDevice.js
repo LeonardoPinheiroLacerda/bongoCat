@@ -34,6 +34,7 @@ function appendLink(href){
 if(check()){    //DISPOSITIVOS MOVEIS
 
     appendLink("style/smartphone.css");
+    appendLink("style/animation.css");
 
     appendScript("js/constructControls.js");
 
