@@ -1,10 +1,5 @@
-.container{
-    border: 8px solid black;
-    position: absolute;
-    height: 428px;
-    width: 750px;
-
-    top:118px;
+.container{ 
+    top:118px
 }
 
 .info{
