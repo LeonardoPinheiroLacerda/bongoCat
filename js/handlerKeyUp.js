@@ -45,5 +45,10 @@ document.onkeyup = function(e){
         case '0': 
             keyboard0Action.undo();
             break;
+
+        case 'c':
+        case 'C':
+            cymbalAction.undo();
+            break;
     }
 }

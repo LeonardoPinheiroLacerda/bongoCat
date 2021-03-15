@@ -48,6 +48,11 @@ document.onkeypress = function(e){
             keyboard0Action.do();
             break;
 
+        case 'c':
+        case 'C':
+            cymbalAction.do();
+            break;
+
         case 'x':
         case 'X':
             document.getElementsByClassName('infoAlert')[0].id = 'invisible';

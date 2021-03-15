@@ -36,3 +36,5 @@ var keyboard7Action = new Action(keyboard7, leftPaw, "keyboard");
 var keyboard8Action = new Action(keyboard8, leftPaw, "keyboard");
 var keyboard9Action = new Action(keyboard9, leftPaw, "keyboard");
 var keyboard0Action = new Action(keyboard0, leftPaw, "keyboard");
+
+var cymbalAction = new Action(cymbal, leftPaw, "cymbal");

@@ -29,7 +29,9 @@ var soundPaths = {
     keyboard7 : 'sounds/keyboard7.mp3',
     keyboard8 : 'sounds/keyboard8.mp3',
     keyboard9 : 'sounds/keyboard9.mp3',
-    keyboard0 : 'sounds/keyboard0.mp3'
+    keyboard0 : 'sounds/keyboard0.mp3',
+
+    cymbal : "sounds/cymbal.mp3"
 }
 
 
@@ -49,6 +51,7 @@ new Audio(soundPaths.keyboard7).load();
 new Audio(soundPaths.keyboard8).load();
 new Audio(soundPaths.keyboard9).load();
 
+new Audio(soundPaths.cymbal).load();
 
 
 var bongo0 = new Sound(soundPaths.bongo0);
@@ -66,4 +69,5 @@ var keyboard8 = new Sound(soundPaths.keyboard8);
 var keyboard9 = new Sound(soundPaths.keyboard9);
 var keyboard0 = new Sound(soundPaths.keyboard0);
 
+var cymbal = new Sound(soundPaths.cymbal);
 
