@@ -1,22 +1,22 @@
 @keyframes buttonClick {
     from{
-        box-shadow: rgb(204 170 204) -8px -6px 0px 0px inset;
+        box-shadow: rgb(185, 185, 185) -8px -6px 0px 0px inset;
         background: white;
     }
     to{
-        box-shadow: rgb(173, 144, 173) -2px -1px 0px 0px inset;
+        box-shadow: rgb(117, 117, 117) -2px -1px 0px 0px inset;
         background: rgb(237, 237, 237);
     }
 }
 
 @keyframes buttonRelease {
     from{
-        box-shadow: rgb(173, 144, 173) -2px -1px 0px 0px inset;
+        box-shadow: rgb(117, 117, 117) -2px -1px 0px 0px inset;
         background: rgb(237, 237, 237);
     }
 
     to{
-        box-shadow: rgb(204 170 204) -8px -6px 0px 0px inset;
+        box-shadow: rgb(185, 185, 185) -8px -6px 0px 0px inset;
         background: white;
     }
 }
