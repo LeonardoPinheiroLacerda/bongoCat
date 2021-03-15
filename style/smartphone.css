@@ -20,7 +20,11 @@
     background-color: white;
     /*border: 4px solid;*/
     position: absolute;
-    top: 590px;
+    top: 625px;
+
+    overflow: scroll;
+    height: 775px;
+    border: 2px solid black;
 }
 
 .control{

@@ -67,6 +67,22 @@ function doAnimation(obj, animation){
 function constructButton(typeButton, action, text){
     var obj = document.createElement('div');
     
+    var leave = function(){
+        action.undo();
+
+        switch(typeButton){
+            case typeButtons.big:
+                doAnimation(obj, animations.bigButtonRelease);
+                break;
+            case typeButtons.medium:
+                doAnimation(obj, animations.mediumButtonRelease);
+                break;
+            case typeButtons.small:
+                doAnimation(obj, animations.smallButtonRelease);
+                break;
+        }
+    }
+
     obj.classList.add(typeButton + "Button");
     obj.classList.add("control");
 
@@ -85,19 +101,13 @@ function constructButton(typeButton, action, text){
         }
     }
 
+
+    obj.ontouchend = function(){
+        leave();
+    }
+
     obj.onpointerup = function(){
-        action.undo();
-        switch(typeButton){
-            case typeButtons.big:
-                doAnimation(obj, animations.bigButtonRelease);
-                break;
-            case typeButtons.medium:
-                doAnimation(obj, animations.mediumButtonRelease);
-                break;
-            case typeButtons.small:
-                doAnimation(obj, animations.smallButtonRelease);
-                break;
-        }
+        leave();
     }
 
     obj.onselectstart = function(){return false}
@@ -110,22 +120,35 @@ function constructButton(typeButton, action, text){
     controls.appendChild(obj);
 }
 
+function constructDescription(text){
+    var node = document.createElement("p");
+    node.innerHTML = text;
+
+    node.style.width = "771px";
+    node.style.textAlign = "center";
+    node.style.marginLeft = "16px";
+
+    controls.appendChild(node);
+}
+
 function meowButton(){
+    constructDescription("Cat");
     constructButton(typeButtons.big, mouthAction, "Meow");
     //controls.appendChild(document.createElement('br'));    
 }
 
 function bongoButtons(){
-
+    constructDescription("Bongo");
     document.getElementsByClassName('instrument')[0].src = "images/bongo.png"
 
     constructButton(typeButtons.medium, bongo0Action, "Left");    
     constructButton(typeButtons.medium, bongo1Action, "Right");
 
+    controls.appendChild(document.createElement('br'));  
 }
 
 function keyboardButtons(){
-
+    constructDescription("Keyboard");
     document.getElementsByClassName('instrument')[0].src = "images/keyboard.png"
 
     constructButton(typeButtons.small, keyboard1Action, "1");
@@ -144,7 +167,15 @@ function keyboardButtons(){
 
 }
 
+function cymbalButton(){
+    constructDescription("Cymbal");
+    document.getElementsByClassName('instrument')[0].src = "images/cymbal.png";
+
+    constructButton(typeButtons.big, cymbalAction, "Right");
+}
+
 
 meowButton();
-//bongoButtons();
+bongoButtons();
 keyboardButtons();
+cymbalButton();
