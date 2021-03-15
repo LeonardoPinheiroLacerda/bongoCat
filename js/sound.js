@@ -1,7 +1,6 @@
 function Sound(path){
     this.path = path;
     this.flag = false;
-    
 }
 
 Sound.prototype.play = function(){
@@ -32,6 +31,25 @@ var soundPaths = {
     keyboard9 : 'sounds/keyboard9.mp3',
     keyboard0 : 'sounds/keyboard0.mp3'
 }
+
+
+new Audio(soundPaths.meow).load();
+
+new Audio(soundPaths.bongo0).load();
+new Audio(soundPaths.bongo1).load();
+
+new Audio(soundPaths.keyboard0).load();
+new Audio(soundPaths.keyboard1).load();
+new Audio(soundPaths.keyboard2).load();
+new Audio(soundPaths.keyboard3).load();
+new Audio(soundPaths.keyboard4).load();
+new Audio(soundPaths.keyboard5).load();
+new Audio(soundPaths.keyboard6).load();
+new Audio(soundPaths.keyboard7).load();
+new Audio(soundPaths.keyboard8).load();
+new Audio(soundPaths.keyboard9).load();
+
+
 
 var bongo0 = new Sound(soundPaths.bongo0);
 var bongo1 = new Sound(soundPaths.bongo1);

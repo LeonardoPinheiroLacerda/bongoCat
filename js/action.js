@@ -21,16 +21,16 @@ Action.prototype.undo = function(){
     this.sound.flush();
 }
 
+var mouthAction = new Action(meow, mouth);
+
 var bongo0Action = new Action(bongo0, rightPaw, "bongo");
 var bongo1Action = new Action(bongo1, leftPaw, "bongo");
-var mouthAction = new Action(meow, mouth);
 
 var keyboard1Action = new Action(keyboard1, rightPaw, "keyboard");
 var keyboard2Action = new Action(keyboard2, rightPaw, "keyboard");
 var keyboard3Action = new Action(keyboard3, rightPaw, "keyboard");
 var keyboard4Action = new Action(keyboard4, rightPaw, "keyboard");
 var keyboard5Action = new Action(keyboard5, rightPaw, "keyboard");
-
 var keyboard6Action = new Action(keyboard6, leftPaw, "keyboard");
 var keyboard7Action = new Action(keyboard7, leftPaw, "keyboard");
 var keyboard8Action = new Action(keyboard8, leftPaw, "keyboard");
