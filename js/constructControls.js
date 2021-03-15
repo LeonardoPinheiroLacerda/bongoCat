@@ -9,14 +9,8 @@ var typeButtons = {
 }
 
 var animations = {
-    bigButtonClick : "bigButtonClick",
-    bigButtonRelease : "bigButtonRelease",
-
-    mediumButtonClick : "mediumButtonClick",
-    mediumButtonRelease : "mediumButtonRelease",
-
-    smallButtonClick : "smallButtonClick",
-    smallButtonRelease : "smallButtonRelease"
+    buttonClick : "buttonClick",
+    buttonRelease : "buttonRelease",
 }
 
 function doAnimation(obj, animation){
@@ -27,42 +21,19 @@ function doAnimation(obj, animation){
     var typeButton;
 
     switch(animation){
-        case animations.bigButtonClick:
-            typeButton = typeButtons.big;
+        case animations.buttonClick:
             flag = true;
             break;
-
-        case animations.bigButtonRelease:
-            typeButton = typeButtons.big;
-            flag = false;
-            break;
-
-        case animations.mediumButtonClick:
-            typeButton = typeButtons.medium;
-            flag = true;
-            break;
-
-        case animations.mediumButtonRelease:
-            typeButton = typeButtons.medium;
-            flag = false;
-            break;
-
-        case animations.smallButtonClick:
-            typeButton = typeButtons.small;
-            flag = true;
-            break;
-
-        case animations.smallButtonRelease:
-            typeButton = typeButtons.small;
+        case animations.buttonRelease:
             flag = false;
             break;
     }
     
 
     if(flag){
-        obj.classList.add(typeButton + "ButtonClicked");
+        obj.classList.add("buttonClicked");
     }else{
-        obj.classList.remove(typeButton + "ButtonClicked");
+        obj.classList.remove("buttonClicked");
     }
 }
 
@@ -71,18 +42,7 @@ function constructButton(typeButton, action, text){
     
     var leave = function(){
         action.undo();
-
-        switch(typeButton){
-            case typeButtons.big:
-                doAnimation(obj, animations.bigButtonRelease);
-                break;
-            case typeButtons.medium:
-                doAnimation(obj, animations.mediumButtonRelease);
-                break;
-            case typeButtons.small:
-                doAnimation(obj, animations.smallButtonRelease);
-                break;
-        }
+        doAnimation(obj, animations.buttonRelease);
     }
 
     obj.classList.add(typeButton + "Button");
@@ -90,17 +50,7 @@ function constructButton(typeButton, action, text){
 
     obj.onpointerdown = function(){
         action.do();
-        switch(typeButton){
-            case typeButtons.big:
-                doAnimation(obj, animations.bigButtonClick);
-                break;
-            case typeButtons.medium:
-                doAnimation(obj, animations.mediumButtonClick);
-                break;
-            case typeButtons.small:
-                doAnimation(obj, animations.smallButtonClick);
-                break;
-        }
+        doAnimation(obj, animations.buttonClick);
     }
 
 

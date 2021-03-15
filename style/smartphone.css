@@ -20,27 +20,21 @@
     overflow: scroll;
     height: 775px;
     border: 2px solid black;
+    border-radius: 6px;
+    box-shadow: inset -6px -4px 0 0px #ccc;
 }
 
 .control{
     border: 4px solid;
     margin: 16px;
     height: 85px;
+
+    border-radius: 6px;
+    box-shadow: inset -8px -6px 0 0px #ccc;
 }
 
 .bigButton{
     width: 771px;
-}
-
-.bigButtonClicked{
-    position: relative;
-    top: 5px;
-    left: 5px;
-
-    width: 766px;
-    height: 80px;
-
-    background: rgb(237, 237, 237);
 }
 
 .mediumButton{
@@ -48,30 +42,13 @@
     display: inline-block; 
 }
 
-.mediumButtonClicked{
-    position: relative;
-    top: 5px;
-    left: 5px;
-
-    width: 360px;
-    height: 80px;
-
-    background: rgb(237, 237, 237);
-}
-
 .smallButton{
     width: 122px;
     display: inline-block;
 }
 
-.smallButtonClicked{
-    position: relative;
-    top: 5px;
-    left: 5px;
-
-    width: 117px;
-    height: 80px;
-
+.buttonClicked{
+    box-shadow: rgb(173, 144, 173) -2px -1px 0px 0px inset;
     background: rgb(237, 237, 237);
 }
 

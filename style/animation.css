@@ -1,116 +1,22 @@
-@keyframes bigButtonClick {
+@keyframes buttonClick {
     from{
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: 771px;
-        height: 85px;
+        box-shadow: rgb(204 170 204) -8px -6px 0px 0px inset;
         background: white;
     }
     to{
-        position: relative;
-        top: 5px;
-        left: 5px;
-        width: 766px;
-        height: 80px;
+        box-shadow: rgb(173, 144, 173) -2px -1px 0px 0px inset;
         background: rgb(237, 237, 237);
     }
 }
 
-@keyframes bigButtonRelease {
+@keyframes buttonRelease {
     from{
-        position: relative;
-        top: 5px;
-        left: 5px;
-        width: 766px;
-        height: 80px;
+        box-shadow: rgb(173, 144, 173) -2px -1px 0px 0px inset;
         background: rgb(237, 237, 237);
     }
 
     to{
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: 771px;
-        height: 85px;
-        background: white;
-    }
-}
-
-@keyframes mediumButtonClick {
-    from{
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: 365px;
-        height: 85px;
-        background: white;
-    }
-    to{
-        position: relative;
-        top: 5px;
-        left: 5px;
-        width: 360px;
-        height: 80px;
-        background: rgb(237, 237, 237);
-    }
-}
-
-@keyframes mediumButtonRelease {
-    from{
-        position: relative;
-        top: 5px;
-        left: 5px;
-        width: 360px;
-        height: 80px;
-        background: rgb(237, 237, 237);
-    }
-
-    to{
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: 365px;
-        height: 85px;
-        background: white;
-    }
-}
-
-@keyframes smallButtonClick {
-    from{
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: 122px;
-        height: 85px;
-        background: white;
-    }
-    to{
-        position: relative;
-        top: 5px;
-        left: 5px;
-        width: 117px;
-        height: 80px;
-        background: rgb(237, 237, 237);
-    }
-}
-
-@keyframes smallButtonRelease {
-    from{
-        position: relative;
-        top: 5px;
-        left: 5px;
-        width: 117px;
-        height: 80px;
-        background: rgb(237, 237, 237);
-    }
-
-    to{
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: 122px;
-        height: 85px;
+        box-shadow: rgb(204 170 204) -8px -6px 0px 0px inset;
         background: white;
     }
 }
