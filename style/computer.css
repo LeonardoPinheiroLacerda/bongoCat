@@ -175,3 +175,10 @@ text{
 .infoAlert div{
     margin: 3px 0px -16px 12px;
 }
+
+.textHelp{
+    position:absolute;
+    font-family: cursive;
+    top: 19px;
+    left: 580px;
+}

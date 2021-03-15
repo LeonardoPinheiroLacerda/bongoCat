@@ -38,3 +38,18 @@ var keyboard9Action = new Action(keyboard9, leftPaw, "keyboard");
 var keyboard0Action = new Action(keyboard0, leftPaw, "keyboard");
 
 var cymbalAction = new Action(cymbal, leftPaw, "cymbal");
+
+var cowbellAction = new Action(cowbell, leftPaw, "cowbell");
+
+var tambourineAction = new Action(tambourine, leftPaw, "tambourine");
+
+var marimba1Action = new Action(marimba1, rightPaw, "marimba");
+var marimba2Action = new Action(marimba2, rightPaw, "marimba");
+var marimba3Action = new Action(marimba3, rightPaw, "marimba");
+var marimba4Action = new Action(marimba4, rightPaw, "marimba");
+var marimba5Action = new Action(marimba5, rightPaw, "marimba");
+var marimba6Action = new Action(marimba6, leftPaw, "marimba");
+var marimba7Action = new Action(marimba7, leftPaw, "marimba");
+var marimba8Action = new Action(marimba8, leftPaw, "marimba");
+var marimba9Action = new Action(marimba9, leftPaw, "marimba");
+var marimba0Action = new Action(marimba0, leftPaw, "marimba");

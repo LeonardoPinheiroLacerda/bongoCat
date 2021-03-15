@@ -167,6 +167,26 @@ function keyboardButtons(){
 
 }
 
+function marimbaButtons(){
+    constructDescription("Marimba");
+    document.getElementsByClassName('instrument')[0].src = "images/marimba.png"
+
+    constructButton(typeButtons.small, marimba1Action, "1");
+    constructButton(typeButtons.small, marimba2Action, "2");
+    constructButton(typeButtons.small, marimba3Action, "3");
+    constructButton(typeButtons.small, marimba4Action, "4");
+    constructButton(typeButtons.small, marimba5Action, "5");
+
+    controls.appendChild(document.createElement('br'));
+
+    constructButton(typeButtons.small, marimba6Action, "6");
+    constructButton(typeButtons.small, marimba7Action, "7");
+    constructButton(typeButtons.small, marimba8Action, "8");
+    constructButton(typeButtons.small, marimba9Action, "9");
+    constructButton(typeButtons.small, marimba0Action, "0");
+
+}
+
 function cymbalButton(){
     constructDescription("Cymbal");
     document.getElementsByClassName('instrument')[0].src = "images/cymbal.png";
@@ -174,8 +194,25 @@ function cymbalButton(){
     constructButton(typeButtons.big, cymbalAction, "Right");
 }
 
+function cowbellButton(){
+    constructDescription("Cowbell");
+    document.getElementsByClassName('instrument')[0].src = "images/cowbell.png";
+
+    constructButton(typeButtons.big, cowbellAction, "Right");
+}
+
+function tambourineButton(){
+    constructDescription("Tambourine");
+    document.getElementsByClassName('instrument')[0].src = "images/tambourine.png";
+
+    constructButton(typeButtons.big, tambourineAction, "Right");
+}
+
 
 meowButton();
 bongoButtons();
 keyboardButtons();
+marimbaButtons();
 cymbalButton();
+cowbellButton();
+tambourineButton();

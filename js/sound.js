@@ -31,7 +31,22 @@ var soundPaths = {
     keyboard9 : 'sounds/keyboard9.mp3',
     keyboard0 : 'sounds/keyboard0.mp3',
 
-    cymbal : "sounds/cymbal.mp3"
+    cymbal : "sounds/cymbal.mp3",
+
+    tambourine : "sounds/tambourine.mp3",
+
+    cowbell : "sounds/cowbell.mp3",
+
+    marimba1 : "sounds/marimba1.mp3",
+    marimba2 : "sounds/marimba2.mp3",
+    marimba3 : "sounds/marimba3.mp3",
+    marimba4 : "sounds/marimba4.mp3",
+    marimba5 : "sounds/marimba5.mp3",
+    marimba6 : "sounds/marimba6.mp3",
+    marimba7 : "sounds/marimba7.mp3",
+    marimba8 : "sounds/marimba8.mp3",
+    marimba9 : "sounds/marimba9.mp3",
+    marimba0 : "sounds/marimba0.mp3",
 }
 
 
@@ -53,6 +68,20 @@ new Audio(soundPaths.keyboard9).load();
 
 new Audio(soundPaths.cymbal).load();
 
+new Audio(soundPaths.tambourine).load();
+
+new Audio(soundPaths.cowbell).load();
+
+new Audio(soundPaths.marimba1).load();
+new Audio(soundPaths.marimba2).load();
+new Audio(soundPaths.marimba3).load();
+new Audio(soundPaths.marimba4).load();
+new Audio(soundPaths.marimba5).load();
+new Audio(soundPaths.marimba6).load();
+new Audio(soundPaths.marimba7).load();
+new Audio(soundPaths.marimba8).load();
+new Audio(soundPaths.marimba9).load();
+new Audio(soundPaths.marimba0).load();
 
 var bongo0 = new Sound(soundPaths.bongo0);
 var bongo1 = new Sound(soundPaths.bongo1);
@@ -71,3 +100,17 @@ var keyboard0 = new Sound(soundPaths.keyboard0);
 
 var cymbal = new Sound(soundPaths.cymbal);
 
+var cowbell = new Sound(soundPaths.cowbell);
+
+var tambourine = new Sound(soundPaths.tambourine);
+
+var marimba1 = new Sound(soundPaths.marimba1);
+var marimba2 = new Sound(soundPaths.marimba2);
+var marimba3 = new Sound(soundPaths.marimba3);
+var marimba4 = new Sound(soundPaths.marimba4);
+var marimba5 = new Sound(soundPaths.marimba5);
+var marimba6 = new Sound(soundPaths.marimba6);
+var marimba7 = new Sound(soundPaths.marimba7);
+var marimba8 = new Sound(soundPaths.marimba8);
+var marimba9 = new Sound(soundPaths.marimba9);
+var marimba0 = new Sound(soundPaths.marimba0);

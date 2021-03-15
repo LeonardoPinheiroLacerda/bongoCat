@@ -50,5 +50,57 @@ document.onkeyup = function(e){
         case 'C':
             cymbalAction.undo();
             break;
+
+        case 'f':
+        case 'F':
+            cowbellAction.undo();
+            break;
+
+        case 'v':
+        case 'V':
+            tambourineAction.undo();
+            break;
+
+        //Marimba
+        case 'q':
+        case 'Q':
+            marimba1Action.undo();
+            break;
+        case 'w':
+        case 'W':
+            marimba2Action.undo();
+            break;
+        case 'e':
+        case 'E':
+            marimba3Action.undo();
+            break;
+        case 'r':
+        case 'R':
+            marimba4Action.undo();
+            break;
+        case 't':
+        case 'T':
+            marimba5Action.undo();
+            break;
+        case 'y':
+        case 'Y':
+            marimba6Action.undo();
+            break;
+        case 'u':
+        case 'U':
+            marimba7Action.undo();
+            break;
+        case 'i':
+        case 'I':
+            marimba8Action.undo();
+            break;
+        case 'o':
+        case 'O':
+            marimba9Action.undo();
+            break;
+        case 'p':
+        case 'P':
+            marimba0Action.undo();
+            break;
     }
 }
