@@ -83,3 +83,7 @@
 .textHelp{
     display:none;
 }
+
+.infoAlert{
+    display: none;
+}

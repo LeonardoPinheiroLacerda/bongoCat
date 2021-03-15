@@ -47,6 +47,8 @@ var soundPaths = {
     marimba8 : "sounds/marimba8.mp3",
     marimba9 : "sounds/marimba9.mp3",
     marimba0 : "sounds/marimba0.mp3",
+
+    explosion : "sounds/explosion.mp3"
 }
 
 
@@ -83,6 +85,8 @@ new Audio(soundPaths.marimba8).load();
 new Audio(soundPaths.marimba9).load();
 new Audio(soundPaths.marimba0).load();
 
+new Audio(soundPaths.explosion).load();
+
 var bongo0 = new Sound(soundPaths.bongo0);
 var bongo1 = new Sound(soundPaths.bongo1);
 var meow = new Sound(soundPaths.meow);
@@ -114,3 +118,5 @@ var marimba7 = new Sound(soundPaths.marimba7);
 var marimba8 = new Sound(soundPaths.marimba8);
 var marimba9 = new Sound(soundPaths.marimba9);
 var marimba0 = new Sound(soundPaths.marimba0);
+
+var explosion = new Sound(soundPaths.explosion);

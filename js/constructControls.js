@@ -1,4 +1,6 @@
 var controls = document.getElementsByClassName('controls')[0];
+controls.onselectstart = function(){return false};
+controls.oncontextmenu = function(){return false};
 
 var typeButtons = {
     big : "big",
@@ -134,12 +136,10 @@ function constructDescription(text){
 function meowButton(){
     constructDescription("Cat");
     constructButton(typeButtons.big, mouthAction, "Meow");
-    //controls.appendChild(document.createElement('br'));    
 }
 
 function bongoButtons(){
     constructDescription("Bongo");
-    document.getElementsByClassName('instrument')[0].src = "images/bongo.png"
 
     constructButton(typeButtons.medium, bongo0Action, "Left");    
     constructButton(typeButtons.medium, bongo1Action, "Right");
@@ -149,7 +149,6 @@ function bongoButtons(){
 
 function keyboardButtons(){
     constructDescription("Keyboard");
-    document.getElementsByClassName('instrument')[0].src = "images/keyboard.png"
 
     constructButton(typeButtons.small, keyboard1Action, "1");
     constructButton(typeButtons.small, keyboard2Action, "2");
@@ -169,7 +168,6 @@ function keyboardButtons(){
 
 function marimbaButtons(){
     constructDescription("Marimba");
-    document.getElementsByClassName('instrument')[0].src = "images/marimba.png"
 
     constructButton(typeButtons.small, marimba1Action, "1");
     constructButton(typeButtons.small, marimba2Action, "2");
@@ -189,23 +187,26 @@ function marimbaButtons(){
 
 function cymbalButton(){
     constructDescription("Cymbal");
-    document.getElementsByClassName('instrument')[0].src = "images/cymbal.png";
 
     constructButton(typeButtons.big, cymbalAction, "Right");
 }
 
 function cowbellButton(){
     constructDescription("Cowbell");
-    document.getElementsByClassName('instrument')[0].src = "images/cowbell.png";
 
     constructButton(typeButtons.big, cowbellAction, "Right");
 }
 
 function tambourineButton(){
     constructDescription("Tambourine");
-    document.getElementsByClassName('instrument')[0].src = "images/tambourine.png";
 
     constructButton(typeButtons.big, tambourineAction, "Right");
+}
+
+function explosionButton(){
+    constructDescription("Explosion");
+
+    constructButton(typeButtons.big, explosionAction, "Left");
 }
 
 
@@ -216,3 +217,4 @@ marimbaButtons();
 cymbalButton();
 cowbellButton();
 tambourineButton();
+explosionButton();

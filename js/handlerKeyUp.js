@@ -102,5 +102,11 @@ document.onkeyup = function(e){
         case 'P':
             marimba0Action.undo();
             break;
+
+        //Explosion
+        case 'g':
+        case 'G':
+            explosionAction.undo();
+            break;
     }
 }

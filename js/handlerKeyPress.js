@@ -111,16 +111,15 @@ document.onkeypress = function (e) {
             marimba0Action.do();
             break;
 
+        //Explosion
+        case 'g':
+        case 'G':
+            explosionAction.do();
+            break;
+
         case 'x':
         case 'X':
             document.getElementsByClassName('infoAlert')[0].id = 'invisible';
             break;
-
-        case 'i':
-        case 'I':
-            document.getElementsByClassName('infoAlert')[0].id = 'visible';
-            break;
-
-
     }
 }
