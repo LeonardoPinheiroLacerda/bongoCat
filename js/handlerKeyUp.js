@@ -109,8 +109,9 @@ document.onkeyup = function(e){
             explosionAction.undo();
             break;
 
-
+        //chicken
         case 'h':
+        case 'H':
             chickenAction.undo();
             break;
     }

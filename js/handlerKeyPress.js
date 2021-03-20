@@ -123,9 +123,9 @@ document.onkeypress = function (e) {
             break;
 
 
-
-
+        //chicken
         case 'h':
+        case 'H':
             chickenAction.do();
             break;
     }
