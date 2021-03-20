@@ -191,3 +191,7 @@ text{
     text-decoration: underline;
     cursor: pointer;
 }
+
+.x:hover{
+    color:red;
+}

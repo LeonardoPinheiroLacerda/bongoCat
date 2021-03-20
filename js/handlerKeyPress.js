@@ -1,3 +1,5 @@
+var AniFlag = false;
+
 document.onkeypress = function (e) {
     switch (e.key) {
         //Bongo
@@ -114,18 +116,25 @@ document.onkeypress = function (e) {
         //Explosion
         case 'g':
         case 'G':
-            explosionAction.do();
+            if(!AniFlag){
+                explosionAction.do();
 
-            //Animação de explosão
-            document.body.style.animationDuration = "2s";
-            document.body.style.animationTimingFunction = "cubic-bezier(0.74, 0.2, 0.98, 0.57)";
-            document.body.style.animationName = "explosion1";
+                AniFlag = true;
 
-            setTimeout(function(){
+                //Explosion's animation
                 document.body.style.animationDuration = "2s";
-                document.body.style.animationName = "explosion2";
-            }, 2100);
+                document.body.style.animationTimingFunction = "cubic-bezier(0.74, 0.2, 0.98, 0.57)";
+                document.body.style.animationName = "explosion1";
 
+                setTimeout(function(){
+                    document.body.style.animationDuration = "2s";
+                    document.body.style.animationName = "explosion2";
+                    
+                    AniFlag = false;
+
+                }, 2100);
+
+            }
             break;
 
         case 'x':

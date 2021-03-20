@@ -1,25 +1,27 @@
 var controls = document.getElementsByClassName('controls')[0];
-controls.onselectstart = function(){return false};
-controls.oncontextmenu = function(){return false};
+controls.onselectstart = function () { return false };
+controls.oncontextmenu = function () { return false };
+
+var aniFlag = false;
 
 var typeButtons = {
-    big : "big",
-    medium : "medium",
-    small : "small"
+    big: "big",
+    medium: "medium",
+    small: "small"
 }
 
 var animations = {
-    buttonClick : "buttonClick",
-    buttonRelease : "buttonRelease",
+    buttonClick: "buttonClick",
+    buttonRelease: "buttonRelease",
 }
 
-function doAnimation(obj, animation){
+function doAnimation(obj, animation) {
     obj.style.animation = animation;
     obj.style.animationDuration = '0.1s';
 
     var flag;
 
-    switch(animation){
+    switch (animation) {
         case animations.buttonClick:
             flag = true;
             break;
@@ -27,19 +29,19 @@ function doAnimation(obj, animation){
             flag = false;
             break;
     }
-    
 
-    if(flag){
+
+    if (flag) {
         obj.classList.add("buttonClicked");
-    }else{
+    } else {
         obj.classList.remove("buttonClicked");
     }
 }
 
-function constructButton(typeButton, action, text, additionalBehavior){
+function constructButton(typeButton, action, text, additionalBehavior) {
     var obj = document.createElement('div');
-    
-    var leave = function(){
+
+    var leave = function () {
         action.undo();
         doAnimation(obj, animations.buttonRelease);
     }
@@ -47,36 +49,33 @@ function constructButton(typeButton, action, text, additionalBehavior){
     obj.classList.add(typeButton + "Button");
     obj.classList.add("control");
 
-    obj.onpointerdown = function(){
+    obj.onpointerdown = function () {
         action.do();
         doAnimation(obj, animations.buttonClick);
-        if(additionalBehavior != undefined){
-            additionalBehavior();
-        }
     }
 
 
-    obj.ontouchend = function(){
+    obj.ontouchend = function () {
         leave();
     }
 
-    obj.onpointerup = function(){
+    obj.onpointerup = function () {
         leave();
     }
 
-    obj.onselectstart = function(){return false}
-    obj.oncontextmenu = function(){return false}
-    
+    obj.onselectstart = function () { return false }
+    obj.oncontextmenu = function () { return false }
+
     var span = document.createElement('span');
     span.innerHTML = text;
 
     obj.appendChild(span);
     controls.appendChild(obj);
 
-    
+
 }
 
-function constructDescription(text){
+function constructDescription(text) {
     var node = document.createElement("p");
     node.innerHTML = text;
 
@@ -87,21 +86,21 @@ function constructDescription(text){
     controls.appendChild(node);
 }
 
-function meowButton(){
+function meowButton() {
     constructDescription("Gato");
     constructButton(typeButtons.big, mouthAction, "Miau");
 }
 
-function bongoButtons(){
+function bongoButtons() {
     constructDescription("Bongo");
 
-    constructButton(typeButtons.medium, bongo0Action, "Esquerda");    
+    constructButton(typeButtons.medium, bongo0Action, "Esquerda");
     constructButton(typeButtons.medium, bongo1Action, "Direita");
 
-    controls.appendChild(document.createElement('br'));  
+    controls.appendChild(document.createElement('br'));
 }
 
-function keyboardButtons(){
+function keyboardButtons() {
     constructDescription("Teclado");
 
     constructButton(typeButtons.small, keyboard1Action, "1");
@@ -120,7 +119,7 @@ function keyboardButtons(){
 
 }
 
-function marimbaButtons(){
+function marimbaButtons() {
     constructDescription("Marimba");
 
     constructButton(typeButtons.small, marimba1Action, "1");
@@ -139,40 +138,67 @@ function marimbaButtons(){
 
 }
 
-function cymbalButton(){
+function cymbalButton() {
     constructDescription("Prato");
 
     constructButton(typeButtons.big, cymbalAction, "Direita");
 }
 
-function cowbellButton(){
+function cowbellButton() {
     constructDescription("Sino");
 
     constructButton(typeButtons.big, cowbellAction, "Direita");
 }
 
-function tambourineButton(){
+function tambourineButton() {
     constructDescription("Pandeiro");
 
     constructButton(typeButtons.big, tambourineAction, "Direita");
 }
 
-function explosionButton(){
+function explosionButton() {
     constructDescription("Nao aperte.");
+    var obj = document.createElement('div');
+    var leave = function () {
+        explosionAction.undo();
+        doAnimation(obj, animations.buttonRelease);
+    }
 
-    constructButton(typeButtons.big, explosionAction, "Eu avisei...", function(){
-        document.body.style.animationDuration = "2s";
-        document.body.style.animationTimingFunction = "cubic-bezier(0.74, 0.2, 0.98, 0.57)";
-        document.body.style.animationName = "explosion1";
+    obj.classList.add("bigButton");
+    obj.classList.add("control");
 
-        setTimeout(function(){
+    obj.onpointerdown = function () {
+       
+        if(aniFlag == false){
+            aniFlag = true
+            explosionAction.do();
+            doAnimation(obj, animations.buttonClick);    
             document.body.style.animationDuration = "2s";
-            document.body.style.animationName = "explosion2";
-        }, 2100);
-    });
+            document.body.style.animationTimingFunction = "cubic-bezier(0.74, 0.2, 0.98, 0.57)";
+            document.body.style.animationName = "explosion1";
+            setTimeout(function () {
+                document.body.style.animationDuration = "2s";
+                document.body.style.animationName = "explosion2";
+                aniFlag = false;
+            }, 2100);
+        }
+    }
+    obj.ontouchend = function () {
+        leave();
+    }
+    obj.onpointerup = function () {
+        leave();
+    }
+    obj.onselectstart = function () { return false }
+    obj.oncontextmenu = function () { return false }
+    var span = document.createElement('span');
+    span.innerHTML = "Eu avisei...";
+    obj.appendChild(span);
+    controls.appendChild(obj);
+
 }
 
-function chickenButton(){
+function chickenButton() {
     constructDescription("Galinha");
 
     constructButton(typeButtons.big, chickenAction, "Esquerda");
