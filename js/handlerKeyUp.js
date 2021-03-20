@@ -108,5 +108,10 @@ document.onkeyup = function(e){
         case 'G':
             explosionAction.undo();
             break;
+
+
+        case 'h':
+            chickenAction.undo();
+            break;
     }
 }

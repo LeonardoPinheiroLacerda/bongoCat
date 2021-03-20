@@ -18,7 +18,7 @@
     top: 625px;
 
     overflow: scroll;
-    height: 775px;
+    height: calc(100vh - 735px);
     border: 2px solid black;
     border-radius: 6px;
     box-shadow: inset -6px -4px 0 0px #ccc;

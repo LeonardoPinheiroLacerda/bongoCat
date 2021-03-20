@@ -121,5 +121,12 @@ document.onkeypress = function (e) {
         case 'X':
             document.getElementsByClassName('infoAlert')[0].id = 'invisible';
             break;
+
+
+
+
+        case 'h':
+            chickenAction.do();
+            break;
     }
 }

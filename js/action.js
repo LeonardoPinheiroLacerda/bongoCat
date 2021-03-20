@@ -31,7 +31,8 @@ var images = {
     cowbell : new Image(),
     tambourine : new Image(),
     explosion : new Image(),
-    marimba : new Image()
+    marimba : new Image(),
+    chicken : new Image()
 }
 images.bongo.src = "images/bongo.png";
 images.keyboard.src = "images/keyboard.png";
@@ -40,6 +41,7 @@ images.cowbell.src = "images/cowbell.png";
 images.tambourine.src = "images/tambourine.png";
 images.explosion.src = "images/explosion.png";
 images.marimba.src = "images/marimba.png";
+images.chicken.src = "images/chicken.png";
 
 var mouthAction = new Action(meow, mouth);
 
@@ -81,3 +83,5 @@ var explosionAction = new Action(explosion, rightPaw, images.explosion,
         left : "154px"
     }
 );
+
+var chickenAction = new Action(chicken, rightPaw, images.chicken);

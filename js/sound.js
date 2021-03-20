@@ -1,18 +1,23 @@
-function Sound(path){
+function Sound(path, continuous){
     this.path = path;
     this.flag = false;
+    this.audio;
+    this.continuous = continuous;
 }
 
 Sound.prototype.play = function(){
     if(this.flag === false){
-        var audio = new Audio(this.path);
-        audio.play();
+        this.audio = new Audio(this.path);
+        this.audio.play();
         this.flag = true;
     }
 }
 
 Sound.prototype.flush = function(){
     this.flag = false;
+    if(this.continuous === true){
+        this.audio.pause();
+    }
 }
 
 var soundPaths = {
@@ -48,7 +53,9 @@ var soundPaths = {
     marimba9 : "sounds/marimba9.mp3",
     marimba0 : "sounds/marimba0.mp3",
 
-    explosion : "sounds/explosion.mp3"
+    explosion : "sounds/explosion.mp3",
+
+    chicken : "sounds/chicken.mp3"
 }
 
 
@@ -87,36 +94,40 @@ new Audio(soundPaths.marimba0).load();
 
 new Audio(soundPaths.explosion).load();
 
-var bongo0 = new Sound(soundPaths.bongo0);
-var bongo1 = new Sound(soundPaths.bongo1);
-var meow = new Sound(soundPaths.meow);
+new Audio(soundPaths.chicken).load();
 
-var keyboard1 = new Sound(soundPaths.keyboard1);
-var keyboard2 = new Sound(soundPaths.keyboard2);
-var keyboard3 = new Sound(soundPaths.keyboard3);
-var keyboard4 = new Sound(soundPaths.keyboard4);
-var keyboard5 = new Sound(soundPaths.keyboard5);
-var keyboard6 = new Sound(soundPaths.keyboard6);
-var keyboard7 = new Sound(soundPaths.keyboard7);
-var keyboard8 = new Sound(soundPaths.keyboard8);
-var keyboard9 = new Sound(soundPaths.keyboard9);
-var keyboard0 = new Sound(soundPaths.keyboard0);
+var bongo0 = new Sound(soundPaths.bongo0, false);
+var bongo1 = new Sound(soundPaths.bongo1, false);
+var meow = new Sound(soundPaths.meow, false);
 
-var cymbal = new Sound(soundPaths.cymbal);
+var keyboard1 = new Sound(soundPaths.keyboard1, false);
+var keyboard2 = new Sound(soundPaths.keyboard2, false);
+var keyboard3 = new Sound(soundPaths.keyboard3, false);
+var keyboard4 = new Sound(soundPaths.keyboard4, false);
+var keyboard5 = new Sound(soundPaths.keyboard5, false);
+var keyboard6 = new Sound(soundPaths.keyboard6, false);
+var keyboard7 = new Sound(soundPaths.keyboard7, false);
+var keyboard8 = new Sound(soundPaths.keyboard8, false);
+var keyboard9 = new Sound(soundPaths.keyboard9, false);
+var keyboard0 = new Sound(soundPaths.keyboard0, false);
 
-var cowbell = new Sound(soundPaths.cowbell);
+var cymbal = new Sound(soundPaths.cymbal, false);
 
-var tambourine = new Sound(soundPaths.tambourine);
+var cowbell = new Sound(soundPaths.cowbell, false);
 
-var marimba1 = new Sound(soundPaths.marimba1);
-var marimba2 = new Sound(soundPaths.marimba2);
-var marimba3 = new Sound(soundPaths.marimba3);
-var marimba4 = new Sound(soundPaths.marimba4);
-var marimba5 = new Sound(soundPaths.marimba5);
-var marimba6 = new Sound(soundPaths.marimba6);
-var marimba7 = new Sound(soundPaths.marimba7);
-var marimba8 = new Sound(soundPaths.marimba8);
-var marimba9 = new Sound(soundPaths.marimba9);
-var marimba0 = new Sound(soundPaths.marimba0);
+var tambourine = new Sound(soundPaths.tambourine, false);
 
-var explosion = new Sound(soundPaths.explosion);
+var marimba1 = new Sound(soundPaths.marimba1, false);
+var marimba2 = new Sound(soundPaths.marimba2, false);
+var marimba3 = new Sound(soundPaths.marimba3, false);
+var marimba4 = new Sound(soundPaths.marimba4, false);
+var marimba5 = new Sound(soundPaths.marimba5, false);
+var marimba6 = new Sound(soundPaths.marimba6, false);
+var marimba7 = new Sound(soundPaths.marimba7, false);
+var marimba8 = new Sound(soundPaths.marimba8, false);
+var marimba9 = new Sound(soundPaths.marimba9, false);
+var marimba0 = new Sound(soundPaths.marimba0, false);
+
+var explosion = new Sound(soundPaths.explosion, false);
+
+var chicken = new Sound(soundPaths.chicken, false);

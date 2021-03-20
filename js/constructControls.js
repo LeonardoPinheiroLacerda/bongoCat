@@ -159,6 +159,12 @@ function explosionButton(){
     constructButton(typeButtons.big, explosionAction, "Left");
 }
 
+function chickenButton(){
+    constructDescription("Chicken");
+
+    constructButton(typeButtons.big, chickenAction, "Left");
+}
+
 
 meowButton();
 bongoButtons();
@@ -168,3 +174,4 @@ cymbalButton();
 cowbellButton();
 tambourineButton();
 explosionButton();
+chickenButton();
