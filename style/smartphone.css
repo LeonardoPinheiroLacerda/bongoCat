@@ -1,5 +1,6 @@
 .container{ 
     top:118px;
+    z-index: -1;
 }
 
 .info{

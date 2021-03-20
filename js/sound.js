@@ -28,7 +28,8 @@ Sound.prototype.flush = function () {
                     audio.volume = 0;
                     clearInterval(fadeout);
                 }
-            }, interval, this.audio);
+            }
+        , interval, this.audio);
     }
 }
 
