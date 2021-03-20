@@ -158,7 +158,7 @@ function tambourineButton(){
 }
 
 function explosionButton(){
-    constructDescription("Não aperte.");
+    constructDescription("Nao aperte.");
 
     constructButton(typeButtons.big, explosionAction, "Eu avisei...", function(){
         document.body.style.animationDuration = "2s";
