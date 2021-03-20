@@ -177,8 +177,14 @@ text{
 }
 
 .textHelp{
-    position:absolute;
+    position: absolute;
     font-family: cursive;
-    top: 19px;
-    left: 580px;
+    top: 21px;
+    left: 559px;
+}
+
+.x{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }

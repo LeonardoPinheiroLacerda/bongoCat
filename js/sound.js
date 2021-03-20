@@ -1,61 +1,75 @@
-function Sound(path, continuous){
+function Sound(path, continuous) {
     this.path = path;
     this.flag = false;
     this.audio;
     this.continuous = continuous;
 }
 
-Sound.prototype.play = function(){
-    if(this.flag === false){
+Sound.prototype.play = function () {
+    if (this.flag === false) {
         this.audio = new Audio(this.path);
         this.audio.play();
         this.flag = true;
     }
 }
 
-Sound.prototype.flush = function(){
+Sound.prototype.flush = function () {
     this.flag = false;
-    if(this.continuous === true){
-        this.audio.pause();
+    if (this.continuous === true) {
+        var vol = 1.0;
+        var interval = 100;
+
+        var fadeout = setInterval(
+            function (audio) {
+                if (vol > 0) {
+                    audio.volume = vol;
+                    vol -= 0.33;
+                }else{
+                    audio.volume = 0;
+                    clearInterval(fadeout);
+                }
+            }, interval, this.audio);
     }
 }
 
+    ;
+
 var soundPaths = {
-    bongo0 : 'sounds/bongo0.mp3',
-    bongo1 : 'sounds/bongo1.mp3',
-    meow : 'sounds/meow.mp3',
+    bongo0: 'sounds/bongo0.mp3',
+    bongo1: 'sounds/bongo1.mp3',
+    meow: 'sounds/meow.mp3',
 
-    keyboard1 : 'sounds/keyboard1.mp3',
-    keyboard2 : 'sounds/keyboard2.mp3',
-    keyboard3 : 'sounds/keyboard3.mp3',
-    keyboard4 : 'sounds/keyboard4.mp3',
-    keyboard5 : 'sounds/keyboard5.mp3',
-    keyboard6 : 'sounds/keyboard6.mp3',
-    keyboard7 : 'sounds/keyboard7.mp3',
-    keyboard8 : 'sounds/keyboard8.mp3',
-    keyboard9 : 'sounds/keyboard9.mp3',
-    keyboard0 : 'sounds/keyboard0.mp3',
+    keyboard1: 'sounds/keyboard1.mp3',
+    keyboard2: 'sounds/keyboard2.mp3',
+    keyboard3: 'sounds/keyboard3.mp3',
+    keyboard4: 'sounds/keyboard4.mp3',
+    keyboard5: 'sounds/keyboard5.mp3',
+    keyboard6: 'sounds/keyboard6.mp3',
+    keyboard7: 'sounds/keyboard7.mp3',
+    keyboard8: 'sounds/keyboard8.mp3',
+    keyboard9: 'sounds/keyboard9.mp3',
+    keyboard0: 'sounds/keyboard0.mp3',
 
-    cymbal : "sounds/cymbal.mp3",
+    cymbal: "sounds/cymbal.mp3",
 
-    tambourine : "sounds/tambourine.mp3",
+    tambourine: "sounds/tambourine.mp3",
 
-    cowbell : "sounds/cowbell.mp3",
+    cowbell: "sounds/cowbell.mp3",
 
-    marimba1 : "sounds/marimba1.mp3",
-    marimba2 : "sounds/marimba2.mp3",
-    marimba3 : "sounds/marimba3.mp3",
-    marimba4 : "sounds/marimba4.mp3",
-    marimba5 : "sounds/marimba5.mp3",
-    marimba6 : "sounds/marimba6.mp3",
-    marimba7 : "sounds/marimba7.mp3",
-    marimba8 : "sounds/marimba8.mp3",
-    marimba9 : "sounds/marimba9.mp3",
-    marimba0 : "sounds/marimba0.mp3",
+    marimba1: "sounds/marimba1.mp3",
+    marimba2: "sounds/marimba2.mp3",
+    marimba3: "sounds/marimba3.mp3",
+    marimba4: "sounds/marimba4.mp3",
+    marimba5: "sounds/marimba5.mp3",
+    marimba6: "sounds/marimba6.mp3",
+    marimba7: "sounds/marimba7.mp3",
+    marimba8: "sounds/marimba8.mp3",
+    marimba9: "sounds/marimba9.mp3",
+    marimba0: "sounds/marimba0.mp3",
 
-    explosion : "sounds/explosion.mp3",
+    explosion: "sounds/explosion.mp3",
 
-    chicken : "sounds/chicken.mp3"
+    chicken: "sounds/chicken.mp3"
 }
 
 
@@ -130,4 +144,4 @@ var marimba0 = new Sound(soundPaths.marimba0, false);
 
 var explosion = new Sound(soundPaths.explosion, false);
 
-var chicken = new Sound(soundPaths.chicken, false);
+var chicken = new Sound(soundPaths.chicken, true);

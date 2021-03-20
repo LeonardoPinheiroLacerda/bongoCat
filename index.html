@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bongo cat</title>
+        <title>Musical cat</title>
         <meta charset="utf-8">
+
+        <meta property="og:locale" content="en_US">
+        <meta property="og:description" content="Fruto do meu mais profundo tédio kk">
+        <meta property="og:image" content="images/thumbnail.JPG">
+        <meta property="og:image:type" content="image/jpg">
+        <meta property="og:image:width" content="800">
+        <meta property="og:image:height" content="600">
+
         <link rel="shortcut icon" href="favicon.png" />
         
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,7 +25,7 @@
             <div class="container">
                 <img src="images/info.png" class="info"
                     onclick="document.getElementsByClassName('infoAlert')[0].id = 'visible'">
-                <text class="textHelp">click for help:</text>
+                <text class="textHelp">Clique para ajuda:</text>
 
                 <div class="cat" id="whiteCat"></div>
                 <div class="rightPaw" id="rightUp"></div>
@@ -30,19 +38,19 @@
                 <div class="line"></div>
 
                 <div class="infoAlert" id="invisible">
-                    <p id="exitText">Press X to exit</p>
+                    <p id="exitText">Aperte <span class="x" onclick="document.getElementsByClassName('infoAlert')[0].id = 'invisible'">X</span> para sair.</p>
 
                     <div>
                         <span class="key" style='width: 135px;'>SPACE</span>
-                        <text> to meow</text>
+                        <text> para miar</text>
                     </div>
                     <br/>
 
                     <div>
                         <span class="key"> A </span>
-                        <text>and</text>
+                        <text>e</text>
                         <span class="key"> D </span>
-                        <text>to play the bongos</text>
+                        <text>para tocar o bongô</text>
                     </div>
                     <br/>
 
@@ -51,7 +59,7 @@
                         <text>...</text>
                         <span class="key"> 9 </span>
                         <span class="key"> 0 </span>
-                        <text> to play the keyboard</text>
+                        <text> para tocar o teclado </text>
                     </div>
                     <br/>
 
@@ -60,37 +68,38 @@
                         <text>...</text>
                         <span class="key"> O </span>
                         <span class="key"> P </span>
-                        <text> to play the marimba</text>
+                        <text> para tocar a marimba</text>
                     </div>
                     <br/>
 
                     <div>
                         <span class="key"> C </span>
-                        <text> to play the cymbal</text>
+                        <text> para tocar o prato </text>
                     </div>
                     <br/>
 
                     <div>
                         <span class="key"> F </span>
-                        <text> to play the cowbell</text>
+                        <text> para tocar o sino</text>
                     </div>
                     <br/>
 
                     <div>
                         <span class="key"> V </span>
-                        <text> to play the tambourine</text>
+                        <text> para tocar o pandeiro</text>
                     </div>
                     <br/>
 
-                    <div style='position: relative; top: -364px; left: 385px; width:200px; height: 50px;'>
-                        <span class="key"> G </span>
-                        <text> to do something</text>
-                    </div>
-                    <br/>
-
-                    <div style='position: relative; top: -367px; left: 385px; width:200px; height: 50px; display:inline'>
+                    <div style='position: relative; top: -360px; left: 385px; width:200px; height: 50px; display:inline'>
                         <span class="key"> H </span>
-                        <text> to press the chicken</text>
+                        <text> para apertar a galinha </text>
+                    </div>
+                    <br/>
+
+                    <div style='position: relative; top: -351px; left: 385px; width:200px; height: 50px; display:inline'>
+                        
+                        <text> não aperte...</text>
+                        <span class="key"> G </span>
                     </div>
                     <br/>
                 </div>

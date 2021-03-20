@@ -18,7 +18,6 @@ function doAnimation(obj, animation){
     obj.style.animationDuration = '0.1s';
 
     var flag;
-    var typeButton;
 
     switch(animation){
         case animations.buttonClick:
@@ -37,7 +36,7 @@ function doAnimation(obj, animation){
     }
 }
 
-function constructButton(typeButton, action, text){
+function constructButton(typeButton, action, text, additionalBehavior){
     var obj = document.createElement('div');
     
     var leave = function(){
@@ -51,6 +50,10 @@ function constructButton(typeButton, action, text){
     obj.onpointerdown = function(){
         action.do();
         doAnimation(obj, animations.buttonClick);
+
+        if(additionalBehavior != undefined){
+            additionalBehavior();
+        }
     }
 
 
@@ -70,6 +73,8 @@ function constructButton(typeButton, action, text){
 
     obj.appendChild(span);
     controls.appendChild(obj);
+
+    
 }
 
 function constructDescription(text){
@@ -84,21 +89,21 @@ function constructDescription(text){
 }
 
 function meowButton(){
-    constructDescription("Cat");
-    constructButton(typeButtons.big, mouthAction, "Meow");
+    constructDescription("Gato");
+    constructButton(typeButtons.big, mouthAction, "Miau");
 }
 
 function bongoButtons(){
     constructDescription("Bongo");
 
-    constructButton(typeButtons.medium, bongo0Action, "Left");    
-    constructButton(typeButtons.medium, bongo1Action, "Right");
+    constructButton(typeButtons.medium, bongo0Action, "Esquerda");    
+    constructButton(typeButtons.medium, bongo1Action, "Direita");
 
     controls.appendChild(document.createElement('br'));  
 }
 
 function keyboardButtons(){
-    constructDescription("Keyboard");
+    constructDescription("Teclado");
 
     constructButton(typeButtons.small, keyboard1Action, "1");
     constructButton(typeButtons.small, keyboard2Action, "2");
@@ -136,33 +141,33 @@ function marimbaButtons(){
 }
 
 function cymbalButton(){
-    constructDescription("Cymbal");
+    constructDescription("Prato");
 
-    constructButton(typeButtons.big, cymbalAction, "Right");
+    constructButton(typeButtons.big, cymbalAction, "Direita");
 }
 
 function cowbellButton(){
-    constructDescription("Cowbell");
+    constructDescription("Sino");
 
-    constructButton(typeButtons.big, cowbellAction, "Right");
+    constructButton(typeButtons.big, cowbellAction, "Direita");
 }
 
 function tambourineButton(){
-    constructDescription("Tambourine");
+    constructDescription("Pandeiro");
 
-    constructButton(typeButtons.big, tambourineAction, "Right");
+    constructButton(typeButtons.big, tambourineAction, "Direita");
 }
 
 function explosionButton(){
-    constructDescription("Explosion");
+    constructDescription("Não aperte.");
 
-    constructButton(typeButtons.big, explosionAction, "Left");
+    constructButton(typeButtons.big, explosionAction, "Eu avisei...", function(){console.log("aaasss"); return 1});
 }
 
 function chickenButton(){
-    constructDescription("Chicken");
+    constructDescription("Galinha");
 
-    constructButton(typeButtons.big, chickenAction, "Left");
+    constructButton(typeButtons.big, chickenAction, "Esquerda");
 }
 
 
@@ -173,5 +178,5 @@ marimbaButtons();
 cymbalButton();
 cowbellButton();
 tambourineButton();
-explosionButton();
 chickenButton();
+explosionButton();
