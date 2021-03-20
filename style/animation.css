@@ -20,3 +20,21 @@
         background: white;
     }
 }
+
+@keyframes explosion1{
+    from{
+        background: white;
+    }
+    to{
+        background: red;
+    }
+}
+
+@keyframes explosion2{
+    from{
+        background: red;
+    }
+    to{
+        background: white;
+    }
+}

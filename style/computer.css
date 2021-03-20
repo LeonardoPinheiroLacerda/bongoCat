@@ -26,6 +26,8 @@
     position: absolute;
     height: 433px;
     width: 750px;
+    background: white;
+    z-index: -1;
 }
 
 #invisible{

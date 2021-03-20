@@ -24,7 +24,7 @@ Sound.prototype.flush = function () {
                 if (vol > 0) {
                     audio.volume = vol;
                     vol -= 0.33;
-                }else{
+                } else {
                     audio.volume = 0;
                     clearInterval(fadeout);
                 }

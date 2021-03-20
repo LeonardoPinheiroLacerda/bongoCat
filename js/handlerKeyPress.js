@@ -115,6 +115,17 @@ document.onkeypress = function (e) {
         case 'g':
         case 'G':
             explosionAction.do();
+
+            //Animação de explosão
+            document.body.style.animationDuration = "2s";
+            document.body.style.animationTimingFunction = "cubic-bezier(0.74, 0.2, 0.98, 0.57)";
+            document.body.style.animationName = "explosion1";
+
+            setTimeout(function(){
+                document.body.style.animationDuration = "2s";
+                document.body.style.animationName = "explosion2";
+            }, 2100);
+
             break;
 
         case 'x':

@@ -50,7 +50,6 @@ function constructButton(typeButton, action, text, additionalBehavior){
     obj.onpointerdown = function(){
         action.do();
         doAnimation(obj, animations.buttonClick);
-
         if(additionalBehavior != undefined){
             additionalBehavior();
         }
@@ -161,7 +160,16 @@ function tambourineButton(){
 function explosionButton(){
     constructDescription("Não aperte.");
 
-    constructButton(typeButtons.big, explosionAction, "Eu avisei...", function(){console.log("aaasss"); return 1});
+    constructButton(typeButtons.big, explosionAction, "Eu avisei...", function(){
+        document.body.style.animationDuration = "2s";
+        document.body.style.animationTimingFunction = "cubic-bezier(0.74, 0.2, 0.98, 0.57)";
+        document.body.style.animationName = "explosion1";
+
+        setTimeout(function(){
+            document.body.style.animationDuration = "2s";
+            document.body.style.animationName = "explosion2";
+        }, 2100);
+    });
 }
 
 function chickenButton(){
